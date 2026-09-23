@@ -5,30 +5,10 @@ priority = -69
 
 [[patches]]
 [patches.pattern]
-target = "functions/UI_definitions.lua"
-pattern = '''
-local card = Card(G.your_collection[j].T.x + G.your_collection[j].T.w/2, G.your_collection[j].T.y, G.CARD_W, G.CARD_H, nil, center)'''
-position = "at"
-payload = '''
-local card = Card(G.your_collection[j].T.x + G.your_collection[j].T.w/2, G.your_collection[j].T.y, G.CARD_W, G.CARD_H, nil, center, {collection = true})'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
-target = "functions/button_callbacks.lua"
-pattern = '''
-local card = Card(G.your_collection[j].T.x + G.your_collection[j].T.w/2, G.your_collection[j].T.y, G.CARD_W, G.CARD_H, G.P_CARDS.empty, center)'''
-position = "at"
-payload = '''
-local card = Card(G.your_collection[j].T.x + G.your_collection[j].T.w/2, G.your_collection[j].T.y, G.CARD_W, G.CARD_H, G.P_CARDS.empty, center, {collection = true})'''
-match_indent = true
-
-[[patches]]
-[patches.pattern]
 target = "card.lua"
 pattern = '''
 self.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed((self.area and self.area.config.type == 'title') and 'false_to_do' or 'to_do'))'''
 position = "at"
 payload = '''
-self.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed((self.params and self.params.collection) and 'false_to_do' or 'to_do'))'''
+self.ability.to_do_poker_hand = pseudorandom_element(_poker_hands, pseudoseed(G.OVERLAY_MENU and 'false_to_do' or 'to_do'))'''
 match_indent = true
