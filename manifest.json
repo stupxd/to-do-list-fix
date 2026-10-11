@@ -1,17 +1,9 @@
 {
-  "id": "todolistfix",
   "name": "ToDoListFix", 
-  "display_name": "To-Do List Fix",
-  "author": ["stupxd aka stupid"],
   "description": "Fixes checking To-Do in collection/statistics affecting future hand types.",
-  "prefix": "todolistfix",
-  "main_file": "mod.lua",
-  "badge_colour": "FFCF87",
-  "badge_text_colour": "FFFFFF",
-  "priority": 69,
-  "version": "1.0.2",
-
-  "version_number": "1.0.2",
+  "version_number": "1.0.3",
   "website_url": "https://github.com/stupxd/to-do-list-fix",
-  "dependencies": []
+  "dependencies": [
+    "Thunderstore-lovely-0.9.0"
+  ]
 }
