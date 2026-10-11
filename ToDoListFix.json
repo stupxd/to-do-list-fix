@@ -9,9 +9,5 @@
   "badge_colour": "FFCF87",
   "badge_text_colour": "FFFFFF",
   "priority": 69,
-  "version": "1.0.2",
-
-  "version_number": "1.0.2",
-  "website_url": "https://github.com/stupxd/to-do-list-fix",
-  "dependencies": []
+  "version": "1.0.3",
 }
